@@ -1,38 +1,108 @@
-@import url('https://fonts.googleapis.com/css2? family= Poppins & display=swap');
-/*Colores claves*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comme&family=Raleway:wght@500&display=swap');
 :root{
-    --back: #f1f1cb;
-    --Texto: #000;
-    --Subs: #2f2dab;
+    --principal: #ffffff;
+    --secundario: #0B1250;
+    --ContrasteAmarillo: #EED209;
+    --Text-celeste: #061a1b;
+    --Text-Standar: #f7faee;
 }
 *{
+    padding: 0;
     margin: 0;
-    /* padding: 0;*/
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 body{
-    background: var(--back);
-    font-family: 'Poppins', sans-serif;
-
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: var(--principal);
 }
-/*Menu*/
-.Nav{
+/*-------------------------------------------------Menu-------------*/
+nav{
+    background: var(--secundario);
+    height: 80px;
     width: 100%;
-    background: red;
-    height: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    float: left;
-    margin-bottom: 40px;
 }
-.Nav h1{
-    margin-left:20px;
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+    color: var(--Text-Standar);
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: var(--Text-Standar);
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
     margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
-.Nav a{
-    color: var(--Subs);
-    text-decoration: none;
-    margin: 20px;
-    padding: 20px;
+#check{
+    display: none;
 }
-/*FIN del menu*/
+nav ul li a:hover{
+    color:#efb810;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #f8ffff 0%, #69eef5 100%) 1; /*agregas el gradiente a las esquinas*/
+    transition: right 1s ease;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 5s;
+    z-index: 6;   
+}
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--secundario);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    
+    #check:checked ~ ul{
+        left:0;
+    }
+}
