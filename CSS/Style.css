@@ -17,6 +17,8 @@
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: var(--principal);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 /*-------------------------------------------------Menu-------------*/
 nav{
@@ -24,7 +26,10 @@ nav{
     height: 80px;
     width: 100%;
     border-bottom:10px solid var(--ContrasteAmarillo);
-    margin-bottom: 30px;
+    margin-bottom: 500px;
+    position: absolute;
+    position: fixed;
+    z-index: 100;
 }
 .enlace{
     position: absolute;
@@ -107,3 +112,51 @@ nav ul li a:hover{
     }
 }
 /*Fin del menu*/
+
+/*---------------------------------------------------------------BIENVENIDA---------------------------------------------------------------*/
+.bienvenida{
+    margin-top: 80px;
+    position: absolute;
+    background: var(--secundario);
+    height: 200px;
+    width: 100%;
+}
+
+.PalabrasBienvenida h1{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #010427;
+}
+.PalabrasBienvenida .lista {
+    margin-left: 40px;   
+}.item{
+    position: relative;
+    animation: roll 8s ease 1s infinite backwards;
+}
+.item:nth-child(1){
+    animation-delay: 05;
+    opacity: 0;
+}
+.item:nth-child(2){
+    animation-delay: 2;
+    opacity: 0;
+}
+.item:nth-child(3){
+    animation-delay: 4;
+    opacity: 0;
+}
+@keyframes roll{
+    0%{
+        opacity: 0;
+        transform: translate3d(0, 70%, 0);
+    }
+    2.5%{
+        opacity: 0;
+        transform: translateZ(0);
+    }
+    27.5%, 100%{
+        opacity: 0;
+        transform: translate3d(0, 70%, 0);
+    }
+}
