@@ -17,7 +17,6 @@
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: var(--principal);
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 /*-------------------------------------------------Menu-------------*/
@@ -114,3 +113,65 @@ nav ul li a:hover{
 /*Fin del menu*/
 
 /*---------------------------------------------------------------BIENVENIDA---------------------------------------------------------------*/
+.slider{
+width: 100%;
+height: 600px;
+overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 7s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: auto;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+.slider, .slider ul, .slider img{
+    height: 100vh;
+}
+}   
+/*---------------------------------------------------------------Informacion  CAEZ---------------------------------------------------------------*/
+.InformacionCaez{
+    position: absolute  ;
+    margin-top: 110px;
+}
+/*---------------------------------------------------------------Imagenes Inst  CAEZ---------------------------------------------------------------*/
+.imagenesIns{
+    position: absolute;
+    margin-top: 110px;
+}
+/*---------------------------------------------------------------Inculcacion CAEZ---------------------------------------------------------------*/
+.Inculacacion{
+    position: absolute;
+    margin-top: 110px;
+}
+/*---------------------------------------------------------------Contacto de la institucion CAEZ---------------------------------------------------------------*/
+.contactoInstitucion{
+    position: absolute;
+    margin-top: 110px;
+}
+/*--------------------------------------------------------------Footer--------------------------------------------------------------*/
+footer{
+    background: var(--secundario);
+    height: 300px;
+    width: 500px;
+}
